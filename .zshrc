@@ -38,7 +38,7 @@ export BAT_THEME=Catppuccin
 
 # ----- eza -----
 export EZA_CONFIG_DIR="$HOME/.config/eza"
-alias ls="eza -a --color=always --icons=always -l --git --no-permissions"
+alias ls="eza -a --color=always --icons=always -l --git"
 
 # ----- FZF -----
 # Set up fzf key bindings and fuzzy completion
@@ -107,6 +107,9 @@ export PATH="$HOME/.local/bin/netcoredbg:$PATH"
 
 # ----- alias -----
 alias c="clear && printf '\e[3J'"
+
 alias vim="nvim"
+alias v="nvim"
+
 alias e="exit"
 alias cd="z"
