@@ -46,16 +46,16 @@ PaletteDark = {
 	-- noir_8 = "#262626",
 	-- noir_9 = "#1a1a1a",
 
-	noir_0 = "#f5f5f5", -- very light
+	noir_0 = "#f5f5f5",
 	noir_1 = "#e8e8e8",
-	noir_2 = "#9c9c9c", -- clearer contrast from 1 & 3
+	noir_2 = "#9c9c9c",
 	noir_3 = "#7a7a7a",
 	noir_4 = "#5f5f5f",
 	noir_5 = "#494949",
 	noir_6 = "#353535",
 	noir_7 = "#252525",
 	noir_8 = "#1a1a1a",
-	noir_9 = "#0f0f0f", -- deep dark
+	noir_9 = "#0f0f0f",
 	none = "NONE",
 }
 
