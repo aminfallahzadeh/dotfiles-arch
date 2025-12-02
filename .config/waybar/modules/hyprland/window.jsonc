@@ -1,0 +1,20 @@
+{
+  "hyprland/window": {
+    "format": "{class}",
+    "rewrite": {
+      "": "Desktop",
+      "google-chrome": " Chrome",
+      "kitty": "󰄛 Kitty",
+      "org.gnome.Nautilus": "󰉋 Nautilus",
+      "org.telegram.desktop": " Telegram"
+    },
+    // "separate-outputs":
+    // "icon": false
+    // "icon-size":
+    // "min-length":
+    // "max-length":
+    // "tooltip":
+    "swap-icon-label": false
+    // "expand":
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "hyprland/language": {
+    "format": "{}",
+    "format-en": "US",
+    "format-fa": "FA",
+    "tooltip-format": "Language {layout}",
+    "min-length": 5
+    // optionally add click to switch
+  }
+}
