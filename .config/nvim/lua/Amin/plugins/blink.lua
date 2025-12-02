@@ -1,12 +1,19 @@
+-------------------------------------------------
+-- name : blink-cmp
+-- url  : https://github.com/saghen/blink.cmp
+-------------------------------------------------
 return {
 	{ "L3MON4D3/LuaSnip", keys = {} },
 	{
 		"saghen/blink.cmp",
+		keys = { "i", "a", "I", "A", "o", "O" },
 		dependencies = {
-			"rafamadriz/friendly-snippets",
-			"onsails/lspkind.nvim",
+			-- "rafamadriz/friendly-snippets",
+			-- "onsails/lspkind.nvim",
+			{ "rafamadriz/friendly-snippets", lazy = true },
+			{ "onsails/lspkind.nvim", lazy = true },
 		},
-		-- event = "InsertEnter",
+		event = "InsertEnter",
 		version = "*",
 		config = function()
 			-- vim.cmd('highlight Pmenu guibg=none')
@@ -37,7 +44,9 @@ return {
 					},
 				},
 				completion = {
-					list = { selection = { preselect = false, auto_insert = false } },
+					list = {
+						selection = { preselect = false, auto_insert = false },
+					},
 					menu = {
 						scrolloff = 1,
 						scrollbar = false,

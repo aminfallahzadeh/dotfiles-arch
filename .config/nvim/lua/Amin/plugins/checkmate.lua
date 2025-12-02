@@ -1,3 +1,7 @@
+-------------------------------------------------
+-- name : checkmate-nvim
+-- url  : https://github.com/bngarren/checkmate.nvim
+-------------------------------------------------
 return {
 	"bngarren/checkmate.nvim",
 	ft = "markdown", -- Lazy loads for Markdown files matching patterns in 'files'

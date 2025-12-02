@@ -1,5 +1,10 @@
+-------------------------------------------------
+-- name : windsurf-nvim
+-- url  : https://github.com/Exafunction/windsurf.nvim
+-------------------------------------------------
 return {
 	"Exafunction/windsurf.nvim",
+	event = "VeryLazy",
 	dependencies = {
 		"nvim-lua/plenary.nvim",
 		-- "hrsh7th/nvim-cmp",

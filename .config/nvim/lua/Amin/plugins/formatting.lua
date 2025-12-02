@@ -1,3 +1,7 @@
+-------------------------------------------------
+-- name : conform-nvim
+-- url  : https://github.com/stevearc/conform.nvim
+-------------------------------------------------
 return {
 	"stevearc/conform.nvim",
 	event = { "BufReadPre", "BufNewFile" },
@@ -23,12 +27,6 @@ return {
 						return #diag > 0
 					end,
 				},
-
-				csharpier = {
-					command = "csharpier",
-					args = { "--write-stdout" },
-					stdin = true,
-				},
 			},
 			formatters_by_ft = {
 				javascript = { "prettier" },
@@ -37,12 +35,11 @@ return {
 				typescriptreact = { "prettier" },
 				svelte = { "prettier" },
 				css = { "prettier" },
-				scss = { "prettier" },
 				html = { "prettier" },
 				json = { "prettier" },
 				yaml = { "prettier" },
-				jsonc = { "deno_fmt" },
 				-- markdown = { "prettier" },
+				jsonc = { "deno_fmt" },
 				graphql = { "prettier" },
 				liquid = { "prettier" },
 				lua = { "stylua" },
@@ -53,7 +50,7 @@ return {
 			format_on_save = {
 				lsp_fallback = true,
 				async = false,
-				timeout_ms = 1500,
+				timeout_ms = 500,
 			},
 		})
 
@@ -68,23 +65,9 @@ return {
 				"false",
 			},
 		}
-		conform.formatters.deno_fmt = {
-			command = "deno",
-			args = { "fmt", "-", "--ext", "jsonc" },
-			stdin = true,
-		}
 
 		conform.formatters.shfmt = {
 			prepend_args = { "-i", "4" },
 		}
-
-		-- NOTE : moved to whichkey.lua
-		-- vim.keymap.set({ "n", "v" }, "<leader>mp", function()
-		-- 	conform.format({
-		-- 		lsp_fallback = true,
-		-- 		async = false,
-		-- 		timeout_ms = 1000,
-		-- 	})
-		-- end, { desc = " Prettier Format whole file or range (in visual mode) with" })
 	end,
 }
