@@ -39,7 +39,6 @@
   "tiny-code-action.nvim": { "branch": "main", "commit": "188122ee2ea278eb74f55c6d39b5f6b5f8eefe8c" },
   "tiny-inline-diagnostic.nvim": { "branch": "main", "commit": "3255aaf9089c06db1732b25762b2eaa889034603" },
   "todo-comments.nvim": { "branch": "main", "commit": "31e3c38ce9b29781e4422fc0322eb0a21f4e8668" },
-  "todo_plus.nvim": { "branch": "main", "commit": "ebfb1318791e799e1730ffd7fd8013faf3bc98ef" },
   "trouble.nvim": { "branch": "main", "commit": "bd67efe408d4816e25e8491cc5ad4088e708a69a" },
   "vim-tmux-navigator": { "branch": "master", "commit": "c45243dc1f32ac6bcf6068e5300f3b2b237e576a" },
   "which-key.nvim": { "branch": "main", "commit": "3aab2147e74890957785941f0c1ad87d0a44c15a" },
