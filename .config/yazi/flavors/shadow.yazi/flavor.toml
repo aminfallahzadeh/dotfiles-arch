@@ -85,7 +85,7 @@ progress_error  = { fg = "#f38ba8", bg = "#181818" }
 
 [pick]
 border   = { fg = "#b5f4d6" }
-active   = { fg = "#506477", bold = true }
+active   = { fg = "#353535", bold = true }
 inactive = {}
 
 # : }}}
