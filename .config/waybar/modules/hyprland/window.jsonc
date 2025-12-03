@@ -2,11 +2,13 @@
   "hyprland/window": {
     "format": "{class}",
     "rewrite": {
-      "": "Desktop",
+      "": "󰇄 Desktop",
       "google-chrome": " Chrome",
       "kitty": "󰄛 Kitty",
       "org.gnome.Nautilus": "󰉋 Nautilus",
-      "org.telegram.desktop": " Telegram"
+      "org.telegram.desktop": " Telegram",
+      "obsidian": " Obsidian",
+      "libreoffice-startcenter": "󰏆 LibreOffice"
     },
     // "separate-outputs":
     // "icon": false

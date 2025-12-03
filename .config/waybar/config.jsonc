@@ -56,7 +56,8 @@
   ],
   "modules-center": [
     // "hyprland/windowcount",
-    "custom/left_div#2",
+    // "custom/left_div#2",
+    "custom/system_update",
     "temperature",
     "custom/left_div#3",
     "memory",
@@ -73,9 +74,8 @@
     "clock#date",
     "custom/right_div#4",
     "network",
-    "bluetooth",
-    "custom/system_update",
-    "custom/right_div#5"
+    "bluetooth"
+    // "custom/right_div#5"
   ],
   "modules-right": [
     "mpris",
