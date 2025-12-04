@@ -35,6 +35,7 @@
     "~/.config/waybar/modules/battery.jsonc",
     "~/.config/waybar/modules/custom/power_menu.jsonc",
     "~/.config/waybar/modules/hyprland/language.jsonc",
+    "~/.config/waybar/modules/custom/notification.jsonc",
 
     "~/.config/waybar/modules/custom/dividers.jsonc"
     // modules that are not included by default:
@@ -87,6 +88,7 @@
     "battery",
     "custom/left_inv#2",
     "hyprland/language",
+    "custom/notification",
     "custom/power_menu"
   ],
 
