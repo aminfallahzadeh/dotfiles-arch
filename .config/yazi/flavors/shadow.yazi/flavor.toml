@@ -44,6 +44,13 @@ inactive = { fg = "#444444", bg = "#181818" }
 
 # : }}}
 
+# : Confirm {{{
+
+[confirm]
+border   = { fg = "#7a7a7a"}
+
+# : }}}
+
 
 # : Mode {{{
 
@@ -84,7 +91,7 @@ progress_error  = { fg = "#f38ba8", bg = "#181818" }
 # : Pick {{{
 
 [pick]
-border   = { fg = "#b5f4d6" }
+border   = { fg = "#666666" }
 active   = { fg = "#353535", bold = true }
 inactive = {}
 
@@ -113,7 +120,7 @@ border = { fg = "#ffffff" }
 # : Tasks {{{
 
 [tasks]
-border  = { fg = "#b5f4d6" }
+border  = { fg = "#666666" }
 title   = {}
 hovered = { fg = "#9c9c9c", underline = true }
 
