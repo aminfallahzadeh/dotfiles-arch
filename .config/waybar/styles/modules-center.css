@@ -118,3 +118,11 @@
 #custom-right_div.5 {
     color: @tray;
 }
+
+/*-----------------
+    color picker
+-----------------*/
+#custom-colorpicker {
+    padding: 0 8px 0 4px;
+    background-color: @tray;
+}

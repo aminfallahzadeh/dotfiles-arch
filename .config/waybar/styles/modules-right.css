@@ -57,3 +57,10 @@
 #custom-power_menu:hover {
     background-color: @hover-bg;
 }
+
+/*----------------
+    notification
+----------------*/
+#custom-notification {
+    margin-right: 5px;
+}

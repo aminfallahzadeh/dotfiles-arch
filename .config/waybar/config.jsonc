@@ -27,6 +27,7 @@
     "~/.config/waybar/modules/network.jsonc",
     "~/.config/waybar/modules/bluetooth.jsonc",
     "~/.config/waybar/modules/custom/system_update.jsonc",
+    "~/.config/waybar/modules/custom/colorpicker.jsonc",
 
     // modules-right
     "~/.config/waybar/modules/mpris.jsonc",
@@ -75,8 +76,8 @@
     "clock#date",
     "custom/right_div#4",
     "network",
-    "bluetooth"
-    // "custom/right_div#5"
+    "bluetooth",
+    "custom/colorpicker"
   ],
   "modules-right": [
     "mpris",
@@ -88,6 +89,7 @@
     "battery",
     "custom/left_inv#2",
     "hyprland/language",
+    "custom/left_inv#2",
     "custom/notification",
     "custom/power_menu"
   ],
