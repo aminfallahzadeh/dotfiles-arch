@@ -117,7 +117,7 @@ element normal.active {
 }
 
 element selected.normal {
-  border-radius:               7px;
+  border-radius:               0;
   background-image:            @selected;
   text-color:                  @foreground;
 }
