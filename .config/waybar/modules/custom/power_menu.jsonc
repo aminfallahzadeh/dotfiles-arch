@@ -16,7 +16,7 @@
     // "align":
     // "justify":
     // "on-click": "kitty -e ~/.config/waybar/scripts/power-menu.sh",
-    "on-click": "wlogout --buttons-per-row 5",
+    "on-click": "wlogout --buttons-per-row 5 --margin 400",
     // "on-click-middle":
     // "on-click-right":
     // "on-update":

@@ -1,0 +1,11 @@
+set recolor "true"
+set highlight-color "rgba(53,53,53,0.5)"
+set adjust-open "width"
+set guioptions ""
+set first-page-column 1:2
+
+set notification-bg "rgba(0,0,0,0)"
+set notification-fg "rgba(255,255,255,1)"
+
+set inputbar-bg "rgba(0,0,0,0)"
+set inputbar-fg "rgba(255,255,255,1)"
