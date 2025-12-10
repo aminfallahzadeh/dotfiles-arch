@@ -21,8 +21,8 @@ window {
   fullscreen:                  false;
   border:                      2px;
   border-radius:               2px;
-  border-color:                @text;
-  width:                       500px;
+  border-color:                @gray;
+  width:                       450px;
   x-offset:                    0px;
   y-offset:                    0px;
   enabled:                     true;

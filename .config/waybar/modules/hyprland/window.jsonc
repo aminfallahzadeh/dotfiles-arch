@@ -8,7 +8,13 @@
       "org.gnome.Nautilus": "󰉋 Nautilus",
       "org.telegram.desktop": " Telegram",
       "obsidian": " Obsidian",
-      "libreoffice-startcenter": "󰏆 LibreOffice"
+      "libreoffice-startcenter": "󰏆 LibreOffice",
+      "libreoffice-calc": "󰏆 LibreOffice",
+      "org.gnome.Loupe": "󰲍 Image Viewer",
+      "org.pwmt.zathura": "󰈔 File Viewer",
+      "vlc": "󰕼 VLC",
+      "firefox": "󰈹 Firefox",
+      "org.gnome.Calendar": " Calendar"
     },
     // "separate-outputs":
     // "icon": false
