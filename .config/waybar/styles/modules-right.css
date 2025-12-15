@@ -46,21 +46,31 @@
 }
 
 /*----------------
-    power menu
+    language
 ----------------*/
-
-#custom-power_menu {
-    /* border-radius: 16px; */
-    padding: 0 19px 0 16px;
-    color: @red;
-}
-#custom-power_menu:hover {
-    background-color: @hover-bg;
+#language {
+    background-color: @overlay2;
 }
 
 /*----------------
     notification
 ----------------*/
+
 #custom-notification {
-    margin-right: 5px;
+    background-color: @time;
+    padding: 0 19px 0 16px;
+}
+
+/*----------------
+    power menu
+----------------*/
+
+#custom-power_menu {
+    /* border-radius: 16px; */
+    background-color: @overlay2;
+    padding: 0 19px 0 16px;
+    color: @red;
+}
+#custom-power_menu:hover {
+    background-color: @hover-bg;
 }

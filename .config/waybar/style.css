@@ -3,12 +3,6 @@
     all: initial;
 }
 
-#custom-privacy-dots {
-    padding: 0 10px;
-    font-size: 12px;
-    letter-spacing: 3px;
-}
-
 @import "current-theme.css";
 @import "styles/fonts.css";
 @import "styles/global.css";
