@@ -1,7 +1,7 @@
 :root {
     /* Colors */
     --bg-1: #252525;
-    --bg-2: #181825;
+    --bg-2: #0f0f0f;
     --bg-btn: #9c9c9c;
     --bg-btn-hover: #7a7a7a;
     --text: #f5f5f5;
@@ -295,7 +295,7 @@ scrollbar slider {
 
 /* Control Center */
 .control-center {
-    background: var(--bg-1);
+    background: var(--bg-2);
     color: var(--text);
     border-radius: var(--radius);
     border: var(--border-width) solid var(--border);
@@ -339,7 +339,7 @@ scrollbar slider {
 
 /* Title Widget */
 .widget-title > label {
-    margin: 8px;
+    margin: 5px;
     font-weight: 700;
     font-size: 12px;
 }
@@ -360,7 +360,7 @@ scrollbar slider {
 .widget-volume,
 .widget-slider,
 .widget-backlight {
-    margin: 8px;
+    margin: 2px;
 }
 
 .widget-dnd label,
@@ -376,14 +376,15 @@ scrollbar slider {
 
 .widget-dnd switch {
     margin: 8px;
-    background: var(--bg-btn);
+    background: var(--bg-1);
     border-radius: var(--radius);
+    border: var(--border-width) solid var(--border);
     min-width: 35px;
     min-height: 15px;
 }
 
 .widget-dnd switch:checked {
-    background: var(--pri-normal);
+    background: var(--bg-btn);
 }
 
 .widget-dnd switch slider {
@@ -512,8 +513,26 @@ scrollbar slider {
     border-radius: var(--radius);
 }
 
-.widget-slider label {
-    font-size: inherit;
+/* .widget-slider label { */
+/*     font-size: inherit; */
+/* } */
+.widget-volume label {
+    font-size: 24px;
+}
+
+/* Slider track (background) */
+scale trough {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Filled part (this is the blue part) */
+scale trough highlight {
+    background-color: var(--text);
+}
+
+/* Slider handle (knob) */
+scale slider {
+    background-color: var(--bg-btn);
 }
 
 /* Backlight Widget */

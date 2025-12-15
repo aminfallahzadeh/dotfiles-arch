@@ -50,7 +50,16 @@
             "app-name": "Spotify"
         }
     },
-    "widgets": ["inhibitors", "title", "dnd", "mpris", "notifications"],
+    "widgets": [
+        "inhibitors",
+        "title",
+        "dnd",
+        "volume",
+        "backlight",
+        "mpris",
+        "notifications",
+        "buttons-grid"
+    ],
     "widget-config": {
         "inhibitors": {
             "text": "Inhibitors",
@@ -73,8 +82,17 @@
             "show-album-art": "always",
             "loop-carousel": false
         },
+        "volume": {
+            "label": "",
+            "step": 5
+        },
+        "backlight": {
+            "label": "󰃞",
+            "step": 5,
+            "device": "nvidia_wmi_ec_backlight"
+        },
         "buttons-grid": {
-            "buttons-per-row": 7,
+            "buttons-per-row": 5,
             "actions": [
                 {
                     "label": "󰖩",

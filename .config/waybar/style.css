@@ -1,6 +1,12 @@
 /* ignore GTK theme */
 * {
-	all: initial;
+    all: initial;
+}
+
+#custom-privacy-dots {
+    padding: 0 10px;
+    font-size: 12px;
+    letter-spacing: 3px;
 }
 
 @import "current-theme.css";
