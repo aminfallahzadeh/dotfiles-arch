@@ -16,6 +16,7 @@ return {
 		require("hlchunk").setup({
 			chunk = {
 				enable = true,
+				error_sign = false,
 				delay = 0,
 				chars = {
 					horizontal_line = "─",

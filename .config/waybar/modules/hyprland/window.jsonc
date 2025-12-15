@@ -14,7 +14,8 @@
       "org.pwmt.zathura": "󰈔 File Viewer",
       "vlc": "󰕼 VLC",
       "firefox": "󰈹 Firefox",
-      "org.gnome.Calendar": " Calendar"
+      "org.gnome.Calendar": " Calendar",
+      "org.mozilla.Thunderbird": " Thunderbird"
     },
     // "separate-outputs":
     // "icon": false

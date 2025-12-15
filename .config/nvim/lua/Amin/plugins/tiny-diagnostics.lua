@@ -17,7 +17,7 @@ return {
 				},
 
 				use_icons_from_diagnostic = false,
-				set_arrow_to_diag_color = true,
+				-- set_arrow_to_diag_color = true,
 
 				multilines = {
 					enabled = false, -- Enable support for multiline diagnostic messages

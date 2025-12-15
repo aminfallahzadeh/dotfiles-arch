@@ -113,3 +113,5 @@ alias v="nvim"
 
 alias e="exit"
 alias cd="z"
+
+alias cm="cmatrix -ba -u 2 -C black"
