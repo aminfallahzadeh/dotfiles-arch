@@ -295,7 +295,9 @@ scrollbar slider {
 
 /* Control Center */
 .control-center {
-    background: var(--bg-2);
+    /* background: var(--bg-2); */
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(12px);
     color: var(--text);
     border-radius: var(--radius);
     border: var(--border-width) solid var(--border);
@@ -347,9 +349,9 @@ scrollbar slider {
 .widget-title > button {
     margin: 8px;
     font-size: 10px;
-    background: var(--bg-1);
-    border: var(--border-width) solid var(--text-disabled);
-    padding: 3px 10px;
+    background: var(--text-disabled);
+    border: var(--border-width) solid var(--text);
+    padding: 2px 8px;
     color: var(--text);
     font-weight: 700;
 }

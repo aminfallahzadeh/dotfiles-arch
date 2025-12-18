@@ -3,7 +3,7 @@
 --------------*/
 
 #custom-user {
-    padding-right: 12px;
+    padding-right: 10px;
 }
 
 /*----------------
@@ -15,7 +15,7 @@
     color: @workspaces;
 }
 #workspaces {
-    padding: 0 1px;
+    padding: 0;
     background-color: @workspaces;
 }
 #workspaces button.active label,
@@ -23,10 +23,18 @@
     color: @accent;
 }
 
+/*----------------
+    workspace dots
+----------------*/
+#workspaces button {
+    padding: 0 4px;
+    margin: 0;
+}
+
 /*------------------
     window title
 ------------------*/
 
 #window {
-    margin-left: 12px;
+    margin-left: 10px;
 }

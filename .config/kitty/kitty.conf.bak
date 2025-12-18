@@ -1,12 +1,27 @@
 #: Font Settings
 
-font_size         12
-font_family       JetBrainsMono Nerd Font
+font_size         11
+
+font_family       Maple Mono NF
+# font_family       Iosevka NF Medium
+
+# font_family       Iosevka NF Bold
 bold_font         auto
 italic_font       auto
 bold_italic_font  auto
-background_opacity 0.9
-# disable_ligatures always
+
+
+# modify_font cell_width 115%
+# modify_font cell_height 15px
+
+# bold_font Iosevka Nerd Font:style=Bold
+# italic_font Iosevka Nerd Font:style=Italic
+# bold_italic_font Iosevka Nerd Font:style=ExtraBold Italic
+
+background_opacity 0.8
+disable_ligatures always
+# letter_spacing 1.0
+# font_features Maple Mono -calt
 
 #: Window Settings
 
@@ -28,11 +43,8 @@ tab_bar_style powerline
 shell zsh
 
 #: Include
-
-include current_theme.conf
-
-
 # BEGIN_KITTY_THEME
-# Catppuccin-Mocha
-include catppuccin-mocha.conf
+# Light
+include current-theme.conf
 # END_KITTY_THEME
+# include dark.conf

@@ -80,7 +80,7 @@ PaletteDarkHighlights = {
 	StatusLine = { fg = PaletteDark.text, bg = PaletteDark.none },
 	StatusLineNC = { fg = PaletteDark.text, bg = PaletteDark.none },
 	LineNr = { bg = PaletteDark.none, fg = PaletteDark.noir_6 },
-	Visual = { bg = PaletteDark.noir_7 },
+	Visual = { bg = PaletteDark.noir_6 },
 
 	["@variable"] = { fg = PaletteDark.noir_1 },
 	["@variable.builtin"] = { fg = PaletteDark.noir_1 },
