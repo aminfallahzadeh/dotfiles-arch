@@ -126,7 +126,7 @@
                     "type": "toggle",
                     "active": true,
                     "tooltip": "Toggle Dark / Light",
-                    "command": "sh -c '~/.config/theme/toggle-theme.sh && swaync-client -C'",
+                    "command": "sh -c '~/.local/bin/toggle-theme.sh'",
                     "update-command": "sh -c '[[ $(cat ~/.config/theme/mode) == \"dark\" ]] && echo true || echo false'"
                 },
                 {

@@ -4,6 +4,9 @@
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+# ----- global theme -----
+export THEME="$(cat ~/.config/theme/mode 2>/dev/null || echo dark)"
+
 # ----- zsh autosuggestion rememeber-----
 setopt APPEND_HISTORY
 setopt SHARE_HISTORY
@@ -23,6 +26,13 @@ export EDITOR=nvim
 
 # ----- starship -----
 eval "$(starship init zsh)"
+export STARSHIP_CONFIG=~/.config/starship/starship.toml
+
+if [[ "$THEME" == "dark" ]]; then
+  export STARSHIP_THEME="dark"
+else
+  export STARSHIP_THEME="light"
+fi
 
 # ----- yazi -----
 function y() {
