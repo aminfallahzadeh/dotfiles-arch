@@ -125,3 +125,4 @@ alias e="exit"
 alias cd="z"
 
 alias cm="cmatrix -ba -u 2 -C black"
+alias cml="cmatrix -ba -u 2 -C white"
