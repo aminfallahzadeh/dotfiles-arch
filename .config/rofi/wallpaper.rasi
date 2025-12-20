@@ -172,3 +172,7 @@ element-icon {
     size:                        23%;
     cursor:                      inherit;
 }
+
+element-text {
+      color: white;
+}
