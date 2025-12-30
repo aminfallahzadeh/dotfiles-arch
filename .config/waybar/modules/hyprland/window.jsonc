@@ -15,7 +15,8 @@
       "vlc": "󰕼 VLC",
       "firefox": "󰈹 Firefox",
       "org.gnome.Calendar": " Calendar",
-      "org.mozilla.Thunderbird": " Thunderbird"
+      "org.mozilla.Thunderbird": " Thunderbird",
+      "code": " VS-Code"
     },
     // "separate-outputs":
     // "icon": false
