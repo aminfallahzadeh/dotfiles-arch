@@ -2,23 +2,3 @@
 use = "imsi32/yatline"
 rev = "88bd1c5"
 hash = "981acbe9b758b1af3a8154c932bb936d"
-
-[[plugin.deps]]
-use = "wekauwau/yatline-tokyo-night"
-rev = "b4a6310"
-hash = "215729a555fe5286f1eb35520963d08"
-
-[[plugin.deps]]
-use = "llanosrocas/yaziline"
-rev = "e7042a8"
-hash = "9c2ab18ff5368056904e4ebb61b17571"
-
-[[flavor.deps]]
-use = "yazi-rs/flavors:catppuccin-mocha"
-rev = "d04a298"
-hash = "288a0dedd5d13b28605cf82c05326dcd"
-
-[[flavor.deps]]
-use = "AdithyanA2005/nord"
-rev = "3a791e9"
-hash = "fa7142cda74a50b271ea212356b40b57"

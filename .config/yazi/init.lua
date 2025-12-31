@@ -3,94 +3,150 @@
 -- local gruvbox_theme = require("yatline-gruvbox"):setup("dark") -- or "light"
 -- local tokyo_night_theme = require("yatline-tokyo-night"):setup("moon") -- or moon/storm/day
 
-local my_theme = {
-	section_separator = { open = "", close = "" },
-	part_separator = { open = "", close = "" },
-	inverse_separator = { open = "", close = "" },
+-- local my_theme = {
+-- 	section_separator = { open = "", close = "" },
+-- 	part_separator = { open = "", close = "" },
+-- 	inverse_separator = { open = "", close = "" },
+--
+-- 	style_a = {
+-- 		fg = "black",
+-- 		bg_mode = {
+-- 			normal = "#f5f5f5",
+-- 			select = "#f9e2af",
+-- 			un_set = "#fab387",
+-- 		},
+-- 	},
+-- 	style_b = { bg = "#494949", fg = "#f5f5f5" },
+-- 	style_c = { bg = "#252525", fg = "#f5f5f5" },
+--
+-- 	permissions_t_fg = "#b5f4d6",
+-- 	permissions_r_fg = "#f9e2af",
+-- 	permissions_w_fg = "#f38ba8",
+-- 	permissions_x_fg = "#89dceb",
+-- 	permissions_s_fg = "#f5f5f5",
+--
+-- 	selected = { icon = "󰻭", fg = "#f9e2af" },
+-- 	copied = { icon = "", fg = "#b5f4d6" },
+-- 	cut = { icon = "", fg = "#f38ba8" },
+-- 	files = { icon = "", fg = "#89b4fa" },
+-- 	filtereds = { icon = "", fg = "#eba0ac" },
+--
+-- 	total = { icon = "󰮍", fg = "#f9e2af" },
+-- 	succ = { icon = "", fg = "#b5f4d6" },
+-- 	fail = { icon = "", fg = "#f38ba8" },
+-- 	found = { icon = "󰮕", fg = "#89b4fa" },
+-- 	processed = { icon = "󰐍", fg = "#b5f4d6" },
+-- }
 
-	style_a = {
-		fg = "black",
-		bg_mode = {
-			normal = "#f5f5f5",
-			select = "#f9e2af",
-			un_set = "#fab387",
-		},
-	},
-	style_b = { bg = "#494949", fg = "#f5f5f5" },
-	style_c = { bg = "#252525", fg = "#f5f5f5" },
+-- require("yatline"):setup({
+-- 	show_background = false,
+--
+-- 	-- theme = catppuccin_theme,
+-- 	-- theme = gruvbox_theme,
+-- 	-- theme = tokyo_night_theme,
+-- 	theme = my_theme,
+--
+-- 	header_line = {
+-- 		left = {
+-- 			section_a = {},
+-- 			section_b = {},
+-- 			section_c = {},
+-- 		},
+-- 		right = {
+-- 			section_a = {},
+-- 			section_b = {},
+-- 			section_c = {},
+-- 		},
+-- 	},
+-- 	status_line = {
+-- 		left = {
+-- 			-- section_a = {
+-- 			-- 	{ type = "string", custom = false, name = "tab_mode" },
+-- 			-- },
+-- 			section_a = {
+-- 				{
+-- 					type = "string",
+-- 					custom = false,
+-- 					name = "hovered_size",
+-- 				},
+-- 			},
+-- 			section_b = {
+-- 				{
+-- 					type = "string",
+-- 					custom = false,
+-- 					name = "hovered_name",
+-- 				},
+-- 			},
+-- 			section_c = {
+-- 				{ type = "string", custom = false, name = "" },
+-- 			},
+-- 		},
+-- 		right = {
+-- 			section_a = {
+-- 				{ type = "string", custom = false, name = "cursor_position" },
+-- 			},
+-- 			section_b = {
+-- 				{ type = "string", custom = false, name = "cursor_percentage" },
+-- 			},
+-- 			-- section_c = {
+-- 			-- 	{ type = "coloreds", custom = false, name = "permissions" },
+-- 			-- },
+-- 		},
+-- 	},
+-- })
 
-	permissions_t_fg = "#b5f4d6",
-	permissions_r_fg = "#f9e2af",
-	permissions_w_fg = "#f38ba8",
-	permissions_x_fg = "#89dceb",
-	permissions_s_fg = "#f5f5f5",
-
-	selected = { icon = "󰻭", fg = "#f9e2af" },
-	copied = { icon = "", fg = "#b5f4d6" },
-	cut = { icon = "", fg = "#f38ba8" },
-	files = { icon = "", fg = "#89b4fa" },
-	filtereds = { icon = "", fg = "#eba0ac" },
-
-	total = { icon = "󰮍", fg = "#f9e2af" },
-	succ = { icon = "", fg = "#b5f4d6" },
-	fail = { icon = "", fg = "#f38ba8" },
-	found = { icon = "󰮕", fg = "#89b4fa" },
-	processed = { icon = "󰐍", fg = "#b5f4d6" },
-}
-
-require("yatline"):setup({
-	show_background = false,
-
-	-- theme = catppuccin_theme,
-	-- theme = gruvbox_theme,
-	-- theme = tokyo_night_theme,
-	theme = my_theme,
-
-	header_line = {
-		left = {
-			section_a = {},
-			section_b = {},
-			section_c = {},
-		},
-		right = {
-			section_a = {},
-			section_b = {},
-			section_c = {},
-		},
-	},
-	status_line = {
-		left = {
-			-- section_a = {
-			-- 	{ type = "string", custom = false, name = "tab_mode" },
-			-- },
-			section_a = {
-				{
-					type = "string",
-					custom = false,
-					name = "hovered_size",
-				},
-			},
-			section_b = {
-				{
-					type = "string",
-					custom = false,
-					name = "hovered_name",
-				},
-			},
-			section_c = {
-				{ type = "string", custom = false, name = "" },
-			},
-		},
-		right = {
-			section_a = {
-				{ type = "string", custom = false, name = "cursor_position" },
-			},
-			section_b = {
-				{ type = "string", custom = false, name = "cursor_percentage" },
-			},
-			section_c = {
-				{ type = "coloreds", custom = false, name = "permissions" },
-			},
-		},
-	},
-})
+-- require("yatline"):setup({
+-- 	show_background = false,
+-- 	theme = my_theme,
+--
+-- 	header_line = {
+-- 		left = {
+-- 			section_a = {},
+-- 			section_b = {},
+-- 			section_c = {},
+-- 		},
+-- 		right = {
+-- 			section_a = {},
+-- 			section_b = {},
+-- 			section_c = {},
+-- 		},
+-- 	},
+--
+-- 	status_line = {
+-- 		left = {
+-- 			section_a = {
+-- 				{
+-- 					type = "styled",
+-- 					name = "hovered_size",
+-- 				},
+-- 			},
+-- 			section_b = {
+-- 				{
+-- 					type = "styled",
+-- 					name = "hovered_name",
+-- 				},
+-- 			},
+-- 			section_c = {}, -- MUST be empty, not a fake item
+-- 		},
+-- 		right = {
+-- 			section_a = {
+-- 				{
+-- 					type = "styled",
+-- 					name = "cursor_position",
+-- 				},
+-- 			},
+-- 			section_b = {
+-- 				{
+-- 					type = "styled",
+-- 					name = "cursor_percentage",
+-- 				},
+-- 			},
+-- 			section_c = {
+-- 				{
+-- 					type = "styled",
+-- 					name = "permissions",
+-- 				},
+-- 			},
+-- 		},
+-- 	},
+-- })

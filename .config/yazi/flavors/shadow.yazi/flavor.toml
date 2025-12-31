@@ -6,10 +6,6 @@
 cwd = { fg = "#666666" }
 syntect_theme =  "~/.config/yazi/plugins/Shadow.tmTheme"
 
-# Hovered
-hovered         = { reversed = true }
-preview_hovered = { underline = true }
-
 # Find
 find_keyword  = { fg = "#f9e2af", bold = true, italic = true, underline = true }
 find_position = { fg = "#777777", bg = "reset", bold = true, italic = true }
@@ -36,6 +32,14 @@ border_style  = { fg = "#222222" }
 
 # : }}}
 
+# Hovered
+
+[indicator]
+current = { bg = "#ffffff", fg = "#181818" }
+preview = { bg = "#181818", fg = "#ffffff" }
+parent =  { bg = "#ffffff", fg = "#181818" }
+padding = { open = "█", close= "█" }
+
 # : Tabs {{{
 
 [tabs]
@@ -51,13 +55,11 @@ border   = { fg = "#7a7a7a"}
 
 # : }}}
 
-
 # : Mode {{{
 
 [mode]
-
-normal_main = { fg = "#181818", bg = "#b5f4d6", bold = true }
-normal_alt  = { fg = "#b5f4d6", bg = "#181818" }
+normal_main = { fg = "#181818", bg = "#ffffff", bold = true }
+normal_alt  = { fg = "#ffffff", bg = "#181818" }
 
 # Select mode
 select_main = { fg = "#181818", bg = "#89dceb", bold = true }
@@ -73,6 +75,9 @@ unset_alt  = { fg = "#f38ba8", bg = "#181818" }
 # : Status bar {{{
 
 [status]
+sep_left = {open = " ", close = " "}
+sep_right = {open = " ", close = " "}
+
 # Permissions
 perm_sep   = { fg = "#444444" }
 perm_type  = { fg = "#b5f4d6" }
@@ -81,11 +86,12 @@ perm_write = { fg = "#f38ba8" }
 perm_exec  = { fg = "#94e2d5" }
 
 # Progress
-progress_label  = { fg = "#ffffff", bold = true }
-progress_normal = { fg = "#b5f4d6", bg = "#181818" }
-progress_error  = { fg = "#f38ba8", bg = "#181818" }
+# progress_label  = { fg = "#ffffff", bold = true }
+# progress_normal = { fg = "#b5f4d6", bg = "#181818" }
+# progress_error  = { fg = "#f38ba8", bg = "#181818" }
 
 # : }}}
+
 
 
 # : Pick {{{
@@ -179,8 +185,8 @@ rules = [
 	{ mime = "application/{pdf,doc,rtf}", fg = "#f1f1f1" },
 
 	# Fallback
-	{ name = "*", fg = "#e2e2e2" },
-	{ name = "*/", fg = "#e8e8e8" }
+	{ url = "*", fg = "#e2e2e2" },
+	{ url = "*/", fg = "#e8e8e8" }
 ]
 
 # : }}}
