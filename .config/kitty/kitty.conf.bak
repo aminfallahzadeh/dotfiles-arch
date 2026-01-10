@@ -1,6 +1,6 @@
 #: Font Settings
 
-font_size         11
+font_size         10
 
 font_family       Maple Mono NF
 # font_family       Iosevka NF Medium
@@ -25,7 +25,7 @@ disable_ligatures always
 
 #: Window Settings
 
-window_padding_width  10
+window_padding_width  15
 confirm_os_window_close 0
 
 draw_minimal_borders yes
