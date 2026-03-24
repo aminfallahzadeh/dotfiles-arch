@@ -135,29 +135,31 @@ vim.api.nvim_create_user_command("LspStatus", function()
 	for i, client in ipairs(clients) do
 		print(string.format("󰌘 Client %d: %s (ID: %d)", i, client.name, client.id))
 		print("  Root: " .. (client.config.root_dir or "N/A"))
+
+		---@diagnostic disable-next-line: undefined-field
 		print("  Filetypes: " .. table.concat(client.config.filetypes or {}, ", "))
 
 		local caps = client.server_capabilities
 		local features = {}
-		if caps.completionProvider then
+		if caps and caps.completionProvider then
 			table.insert(features, "completion")
 		end
-		if caps.hoverProvider then
+		if caps and caps.hoverProvider then
 			table.insert(features, "hover")
 		end
-		if caps.definitionProvider then
+		if caps and caps.definitionProvider then
 			table.insert(features, "definition")
 		end
-		if caps.referencesProvider then
+		if caps and caps.referencesProvider then
 			table.insert(features, "references")
 		end
-		if caps.renameProvider then
+		if caps and caps.renameProvider then
 			table.insert(features, "rename")
 		end
-		if caps.codeActionProvider then
+		if caps and caps.codeActionProvider then
 			table.insert(features, "code_action")
 		end
-		if caps.documentFormattingProvider then
+		if caps and caps.documentFormattingProvider then
 			table.insert(features, "formatting")
 		end
 
@@ -178,7 +180,7 @@ vim.api.nvim_create_user_command("LspCapabilities", function()
 
 	for _, client in ipairs(clients) do
 		print("Capabilities for " .. client.name .. ":")
-		local caps = client.server_capabilities
+		local caps = client.server_capabilities or {}
 
 		local capability_list = {
 			{ "Completion", caps.completionProvider },

@@ -121,6 +121,7 @@ vim.api.nvim_create_autocmd("FileType", {
 -- Highlight Fixes
 -------------------------------------------------
 vim.api.nvim_set_hl(0, "DiagnosticUnnecessary", {})
+vim.api.nvim_set_hl(0, "@markup.link.label.tsx", { underline = false })
 
 -------------------------------------------------
 -- Session Options Fix (for checkhealth)
@@ -132,3 +133,4 @@ vim.o.sessionoptions = "buffers,curdir,folds,help,tabpages,winsize,winpos,localo
 -------------------------------------------------
 vim.g.sass_variables_file = "_variables.scss"
 vim.o.termbidi = true
+vim.opt.confirm = false
