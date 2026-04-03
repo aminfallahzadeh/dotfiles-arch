@@ -11,7 +11,7 @@ FPS=60
 TYPE="any"
 DURATION=3
 BEZIER="0.4,0.2,0.4,1.0"
-SWWW_PARAMS="--transition-fps ${FPS} --transition-type ${TYPE} --transition-duration ${DURATION} --transition-bezier ${BEZIER}"
+AWWW_PARAMS="--transition-fps ${FPS} --transition-type ${TYPE} --transition-duration ${DURATION} --transition-bezier ${BEZIER}"
 
 # Check if swaybg is running
 if pidof swaybg > /dev/null; then
@@ -32,14 +32,14 @@ rofiCommand="rofi -show -dmenu -theme ${themesDir}/wallpaper.rasi"
 # Execute command according the wallpaper manager
 executeCommand() {
 
-  if command -v swww &>/dev/null; then
-    swww img "$1" ${SWWW_PARAMS} && notify-send "Wallpaper Changed" -i "$1" --app-name=Wallpaper
+  if command -v awww &>/dev/null; then
+    awww img "$1" ${AWWW_PARAMS} && notify-send "Wallpaper Changed" -i "$1" --app-name=Wallpaper
 
   elif command -v swaybg &>/dev/null; then
     swaybg -i "$1" &
   
   else
-    echo "Neither swww nor swaybg are installed."
+    echo "Neither awww nor swaybg are installed."
     exit 1
   fi
 
@@ -63,9 +63,9 @@ menu() {
   done
 }
 
-# If swww exists, start it
-if command -v swww &>/dev/null; then
-  swww query || swww init
+# If awww exists, start it
+if command -v awww &>/dev/null; then
+  awww query || awww init
 fi
 
 # Execution
