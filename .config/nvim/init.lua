@@ -1,8 +1,8 @@
 -- vim.cmd("colorscheme minimum")
 
-require("Amin.core")
-require("Amin.lazy")
-require("Amin.core.lsp")
+require("core")
+require("lazy_setup")
+require("core.lsp")
 
-require("Amin.custom.statusline")
-require("Amin.custom.theme")
+require("custom.statusline")
+require("custom.theme")

@@ -6,7 +6,7 @@ return {
 		{ "antosha417/nvim-lsp-file-operations", config = true },
 	},
 	config = function()
-		local icons = require("Amin.core.icons")
+		local icons = require("core.icons")
 
 		-- NOTE : Moved all this to Mason including local variables
 		-- used to enable autocompletion (assign to every lsp server config)

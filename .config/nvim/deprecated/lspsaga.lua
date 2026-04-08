@@ -29,7 +29,7 @@ return {
 			},
 		})
 
-		local icons = require("Amin.core.icons")
+		local icons = require("core.icons")
 		local signs = {
 			Error = icons.diagnostics.Error .. " ",
 			Warn = icons.diagnostics.Warning .. " ",

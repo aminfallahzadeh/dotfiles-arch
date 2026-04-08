@@ -6,7 +6,7 @@ return {
 	"petertriho/nvim-scrollbar",
 	lazy = false,
 	config = function()
-		local colors = require("Amin.core.colors.dark")
+		local colors = require("core.colors.dark")
 		require("scrollbar").setup({
 			handle = {
 				color = colors.PaletteDark.noir_6,
