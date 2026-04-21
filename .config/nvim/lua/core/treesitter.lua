@@ -15,7 +15,8 @@ M.languages = {
 	html = "html",
 	css = "css",
 	scss = "scss",
-	-- python = "python",
+	python = "python",
+	yaml = "yaml",
 	markdown = "markdown",
 	["markdown-inline"] = "markdown-inline",
 }
