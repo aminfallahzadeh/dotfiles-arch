@@ -55,7 +55,9 @@ vim.diagnostic.config({
 	signs = {
 		text = signs, -- Enable signs in the gutter
 	},
-	virtual_text = true, -- Specify Enable virtual text for diagnostics
+	virtual_text = { -- Specify Enable virtual text for diagnostics
+		prefix = "|", -- or "▎"
+	},
 	underline = true,
 	-- underline = {
 	--
@@ -111,7 +113,7 @@ vim.api.nvim_create_user_command("LspRestart", function()
 
 	for _, client in ipairs(clients) do
 		vim.notify("Restarting " .. client.name, vim.log.levels.INFO)
-		vim.lsp.stop_client(client.id)
+		client:stop()
 	end
 
 	vim.defer_fn(function()
@@ -137,9 +139,9 @@ vim.api.nvim_create_user_command("LspStatus", function()
 		print("  Root: " .. (client.config.root_dir or "N/A"))
 
 		---@diagnostic disable-next-line: undefined-field
-		print("  Filetypes: " .. table.concat(client.config.filetypes or {}, ", "))
+		print("  Filetypes: " .. table.concat(client.config["filetypes"] or {}, ", "))
 
-		local caps = client.server_capabilities
+		local caps = client.server_capabilities or {}
 		local features = {}
 		if caps and caps.completionProvider then
 			table.insert(features, "completion")
@@ -181,6 +183,11 @@ vim.api.nvim_create_user_command("LspCapabilities", function()
 	for _, client in ipairs(clients) do
 		print("Capabilities for " .. client.name .. ":")
 		local caps = client.server_capabilities or {}
+
+		if caps == nil then
+			print("No capabilities found")
+			return
+		end
 
 		local capability_list = {
 			{ "Completion", caps.completionProvider },
