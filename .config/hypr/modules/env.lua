@@ -1,0 +1,5 @@
+hl.env("WLR_NO_HARDWARE_CURSORS", "1")
+hl.env("RUST_BACKTRACE", "1")
+hl.env("HYPRSHOT_DIR", "$HOME/Pictures/Screenshots")
+-- hl.env("XCURSOR_SIZE", "20")
+-- hl.env("HYPRCURSOR_SIZE", "20")
