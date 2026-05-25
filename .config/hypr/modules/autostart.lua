@@ -15,8 +15,18 @@ hl.on("hyprland.start", function()
 	hl.exec_cmd(" wl-paste -p -t text --watch clipman store -P --histpath='~/.local/share/clipman-primary.json'")
 
 	-- 2. Remove duplicated cursor
-	hl.exec_cmd("hyprctl dispatch dpms off")
-	hl.exec_cmd("sleep 1 && hyprctl dispatch dpms on")
+	-- hl.exec_cmd("hyprctl dispatch dpms off")
+	-- hl.exec_cmd("sleep 1 && hyprctl dispatch dpms on")
+	-- hl.dsp.dpms({ action = "disable" })
+	-- hl.dsp.exec_raw("sleep 1")
+	-- hl.dsp.dpms({ action = "enable" })
+	hl.exec_cmd([[
+bash -c '
+hyprctl dispatch "hl.dsp.dpms({ action = \"disable\" })"
+sleep 1
+hyprctl dispatch "hl.dsp.dpms({ action = \"enable\" })"
+'
+]])
 
 	-- 3. Running scripts
 	hl.exec_cmd("bash " .. scripts .. "/autostart/services")
