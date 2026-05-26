@@ -119,7 +119,7 @@
                     "label": "󰄀",
                     "active": true,
                     "type": "button",
-                    "command": "sh -c '~/.local/bin/screenshot.sh --select' & swaync-client -t"
+                    "command": "sh -c '~/.config/swaync/scripts/screenshot.sh --select' & swaync-client -t"
                 },
                 {
                     "label": "󰽥",
