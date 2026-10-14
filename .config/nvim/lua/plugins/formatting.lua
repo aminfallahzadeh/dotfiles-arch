@@ -41,6 +41,7 @@ return {
 				-- markdown = { "prettier" },
 				jsonc = { "deno_fmt" },
 				graphql = { "prettier" },
+				scss = { "prettier" },
 				liquid = { "prettier" },
 				lua = { "stylua" },
 				python = { "black" },

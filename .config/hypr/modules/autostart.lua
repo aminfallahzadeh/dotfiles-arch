@@ -35,5 +35,6 @@ hyprctl dispatch "hl.dsp.dpms({ action = \"enable\" })"
 	hl.exec_cmd("hypridle")
 	hl.exec_cmd("awww-daemon")
 	hl.exec_cmd("swaync")
-	hl.exec_cmd("waybar")
+	-- hl.exec_cmd("waybar")
+	hl.exec_cmd("bash -c 'sleep 2 && waybar'")
 end)
