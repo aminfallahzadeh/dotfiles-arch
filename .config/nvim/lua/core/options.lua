@@ -118,6 +118,20 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 
 -------------------------------------------------
+-- LSP Inline Completion
+-------------------------------------------------
+vim.lsp.inline_completion.enable(true)
+vim.keymap.set("i", "<Tab>", function()
+	if not vim.lsp.inline_completion.get() then
+		return "<Tab>"
+	end
+end, {
+	expr = true,
+	replace_keycodes = true,
+	desc = "Get the current inline completion",
+})
+
+-------------------------------------------------
 -- Highlight Fixes
 -------------------------------------------------
 vim.api.nvim_set_hl(0, "DiagnosticUnnecessary", {})
