@@ -3,8 +3,8 @@
     "format": "{}",
     "format-en": "US",
     "format-fa": "FA",
-    "tooltip-format": "Language {layout}",
-    "min-length": 5
-    // optionally add click to switch
+    "tooltip-format": "{long}",
+    "min-length": 5,
+    "on-click": "hyprctl switchxkblayout current next"
   }
 }
