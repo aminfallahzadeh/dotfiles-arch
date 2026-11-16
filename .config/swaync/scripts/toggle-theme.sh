@@ -15,12 +15,55 @@ fi
 echo "$NEW" > "$THEME_FILE"
 
 # GTK settings
-echo "Switching to: $NEW"
-echo "Applying GTK theme: $THEME_NAME"
 gsettings set org.gnome.desktop.interface color-scheme "prefer-$NEW"
 gsettings set org.gnome.desktop.interface gtk-theme "$THEME_NAME"
-echo "Current GTK theme:"
-gsettings get org.gnome.desktop.interface gtk-theme
+
+# Update GTK3 and GTK4 settings.ini
+for version in 3.0 4.0; do
+    CONFIG="$HOME/.config/gtk-$version/settings.ini"
+
+    if [ -f "$CONFIG" ]; then
+        if grep -q '^gtk-theme-name=' "$CONFIG"; then
+            sed -i "s/^gtk-theme-name=.*/gtk-theme-name=$THEME_NAME/" "$CONFIG"
+            sed -i "s/^gtk-application-prefer-dark-theme=.*/gtk-application-prefer-dark-theme=$( [ "$NEW" = "dark" ] && echo 1 || echo 0 )/" "$CONFIG"
+        else
+            sed -i "/^\[Settings\]/a gtk-theme-name=$THEME_NAME" "$CONFIG"
+            sed -i "/^\[Settings\]/a gtk-application-prefer-dark-theme=$( [ "$NEW" = "dark" ] && echo 1 || echo 0 )" "$CONFIG"
+        fi
+    fi
+done
+
+# Update GTK4 theme symlinks
+GTK4_CONFIG="$HOME/.config/gtk-4.0"
+
+ln -sfn "$HOME/.themes/$THEME_NAME/gtk-4.0/gtk.css" \
+    "$GTK4_CONFIG/gtk.css"
+
+ln -sfn "$HOME/.themes/$THEME_NAME/gtk-4.0/gtk-dark.css" \
+    "$GTK4_CONFIG/gtk-dark.css"
+
+# Update xsettingsd.conf
+XSETTINGS="$HOME/.config/xsettingsd/xsettingsd.conf"
+
+if [ -f "$XSETTINGS" ]; then
+    sed -i "s|^Net/ThemeName .*|Net/ThemeName \"$THEME_NAME\"|" "$XSETTINGS"
+
+    pkill -x xsettingsd
+    xsettingsd &
+fi
+
+# Update GTK2 custom settings
+GTK2_CONFIG="$HOME/.gtkrc-2.0.mine"
+
+if [ -f "$GTK2_CONFIG" ]; then
+    sed -i "s|^gtk-theme-name=.*|gtk-theme-name=\"$THEME_NAME\"|" "$GTK2_CONFIG"
+fi
+
+# Restart Nautilus to apply theme
+if pgrep -x nautilus >/dev/null; then
+    nautilus -q
+    gtk-launch org.gnome.Nautilus &
+fi
 
 # # Kitty
 # kitty @ set-colors -a "$HOME/.config/kitty/themes/$NEW.conf"
