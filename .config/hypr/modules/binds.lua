@@ -21,6 +21,7 @@ local vlc = "vlc"
 local calculator = "qualculate-qt"
 local code = "code"
 local remote = "remmina"
+local IDM = "xdm-app"
 
 -- apps
 hl.bind(mainMod .. " + RETURN", hl.dsp.exec_cmd(terminal))
@@ -35,6 +36,7 @@ hl.bind(mainMod .. " + SHIFT + V", hl.dsp.exec_cmd(vlc))
 hl.bind(mainMod .. " + SHIFT + C", hl.dsp.exec_cmd(calculator))
 hl.bind(mainMod .. " + C", hl.dsp.exec_cmd(code))
 hl.bind(mainMod .. " + SHIFT + R", hl.dsp.exec_cmd(remote))
+hl.bind(mainMod .. " + SHIFT + D", hl.dsp.exec_cmd(IDM))
 
 -- rofi
 hl.bind(mainMod .. " + D", hl.dsp.exec_cmd(menu))

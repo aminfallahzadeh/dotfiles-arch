@@ -5,15 +5,22 @@ THEME_FILE="$HOME/.config/theme/mode"
 CURRENT=$(cat "$THEME_FILE" 2>/dev/null || echo "dark")
 
 if [ "$CURRENT" = "dark" ]; then
-  NEW="light"
+    NEW="light"
+    THEME_NAME="Graphite-Light"
 else
-  NEW="dark"
+    NEW="dark"
+    THEME_NAME="Graphite-Dark"
 fi
 
 echo "$NEW" > "$THEME_FILE"
 
-# GTK
+# GTK settings
+echo "Switching to: $NEW"
+echo "Applying GTK theme: $THEME_NAME"
 gsettings set org.gnome.desktop.interface color-scheme "prefer-$NEW"
+gsettings set org.gnome.desktop.interface gtk-theme "$THEME_NAME"
+echo "Current GTK theme:"
+gsettings get org.gnome.desktop.interface gtk-theme
 
 # # Kitty
 # kitty @ set-colors -a "$HOME/.config/kitty/themes/$NEW.conf"

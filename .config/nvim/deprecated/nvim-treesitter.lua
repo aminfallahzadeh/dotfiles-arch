@@ -9,7 +9,7 @@ return {
 		build = ":TSUpdate",
 		config = function()
 			-- import nvim-treesitter plugin
-			local treesitter = require("nvim-treesitter.configs")
+			local treesitter = require("nvim-treesitter")
 
 			-- configure treesitter
 			treesitter.setup({ -- enable syntax highlighting
@@ -57,26 +57,26 @@ return {
 		end,
 	},
 	-- NOTE: js,ts,jsx,tsx Auto Close Tags
-	{
-		"windwp/nvim-ts-autotag",
-		ft = { "html", "xml", "javascript", "typescript", "javascriptreact", "typescriptreact" },
-		config = function()
-			-- Independent nvim-ts-autotag setup
-			require("nvim-ts-autotag").setup({
-				opts = {
-					enable_close = true, -- Auto-close tags
-					enable_rename = true, -- Auto-rename pairs
-					enable_close_on_slash = false, -- Disable auto-close on trailing `</`
-				},
-				per_filetype = {
-					["html"] = {
-						enable_close = true, -- Disable auto-closing for HTML
-					},
-					["typescriptreact"] = {
-						enable_close = true, -- Explicitly enable auto-closing (optional, defaults to `true`)
-					},
-				},
-			})
-		end,
-	},
+	-- {
+	-- 	"windwp/nvim-ts-autotag",
+	-- 	ft = { "html", "xml", "javascript", "typescript", "javascriptreact", "typescriptreact" },
+	-- 	config = function()
+	-- 		-- Independent nvim-ts-autotag setup
+	-- 		require("nvim-ts-autotag").setup({
+	-- 			opts = {
+	-- 				enable_close = true, -- Auto-close tags
+	-- 				enable_rename = true, -- Auto-rename pairs
+	-- 				enable_close_on_slash = false, -- Disable auto-close on trailing `</`
+	-- 			},
+	-- 			per_filetype = {
+	-- 				["html"] = {
+	-- 					enable_close = true, -- Disable auto-closing for HTML
+	-- 				},
+	-- 				["typescriptreact"] = {
+	-- 					enable_close = true, -- Explicitly enable auto-closing (optional, defaults to `true`)
+	-- 				},
+	-- 			},
+	-- 		})
+	-- 	end,
+	-- },
 }

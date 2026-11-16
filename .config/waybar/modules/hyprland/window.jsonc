@@ -16,7 +16,8 @@
       "firefox": "󰈹 Firefox",
       "org.gnome.Calendar": " Calendar",
       "org.mozilla.Thunderbird": " Thunderbird",
-      "code": " VS-Code"
+      "code": " VS-Code",
+      "xdm-app": "⬇ XDM"
     },
     // "separate-outputs":
     // "icon": false
