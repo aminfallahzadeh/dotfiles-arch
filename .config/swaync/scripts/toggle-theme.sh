@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# PUT THIS FILE IN ~/.local/bin
+
 THEME_FILE="$HOME/.config/theme/mode"
 
 CURRENT=$(cat "$THEME_FILE" 2>/dev/null || echo "dark")
