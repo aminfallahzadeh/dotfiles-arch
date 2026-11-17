@@ -3,15 +3,24 @@
 # PUT THIS FILE IN ~/.local/bin
 
 THEME_FILE="$HOME/.config/theme/mode"
+WALLPAPER_DIR="$HOME/.wallpapers"
+
+DARK_WALLPAPER="$WALLPAPER_DIR/Hunter's-Mark-Black.png"
+LIGHT_WALLPAPER="$WALLPAPER_DIR/Bloodborne-Light-3.jpg"
+
+DARK_GTK_THEME="Graphite-Dark"
+LIGHT_GTK_THEME="Graphite-Light"
 
 CURRENT=$(cat "$THEME_FILE" 2>/dev/null || echo "dark")
 
 if [ "$CURRENT" = "dark" ]; then
     NEW="light"
-    THEME_NAME="Graphite-Light"
+    THEME_NAME="$LIGHT_GTK_THEME"
+    WALLPAPER="$LIGHT_WALLPAPER"
 else
     NEW="dark"
-    THEME_NAME="Graphite-Dark"
+    THEME_NAME="$DARK_GTK_THEME"
+    WALLPAPER="$DARK_WALLPAPER"
 fi
 
 echo "$NEW" > "$THEME_FILE"
@@ -66,6 +75,22 @@ if pgrep -x nautilus >/dev/null; then
     nautilus -q
     gtk-launch org.gnome.Nautilus &
 fi
+
+# Change wallpaper
+if command -v awww &>/dev/null; then
+    awww img "$WALLPAPER" \
+        --transition-fps 60 \
+        --transition-type any \
+        --transition-duration 3 \
+        --transition-bezier "0.4,0.2,0.4,1.0"
+
+elif command -v swaybg &>/dev/null; then
+    pkill swaybg
+    swaybg -i "$WALLPAPER" &
+fi
+
+# Update current wallpaper symlink
+ln -sf "$WALLPAPER" "$HOME/.current_wallpaper"
 
 # # Kitty
 # kitty @ set-colors -a "$HOME/.config/kitty/themes/$NEW.conf"

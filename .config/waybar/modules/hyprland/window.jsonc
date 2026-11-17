@@ -17,7 +17,9 @@
       "org.gnome.Calendar": " Calendar",
       "org.mozilla.Thunderbird": " Thunderbird",
       "code": " VS-Code",
-      "xdm-app": "⬇ XDM"
+      "xdm-app": "⬇ XDM",
+      "nwg-look": "󰈫 NWG-Look",
+      "md.obsidian.Obsidian": "❖ Obsidian"
     },
     // "separate-outputs":
     // "icon": false
