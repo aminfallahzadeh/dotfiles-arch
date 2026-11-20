@@ -12,7 +12,6 @@ local servers = {
 	"marksman",
 	"tailwindcss",
 	"pylsp",
-	"copilot",
 }
 
 -- ============================================================================
@@ -71,31 +70,64 @@ vim.diagnostic.config({
 -- LSP Server Setup
 -- ============================================================================
 
+-- local capabilities = get_capabilities()
+--
+-- for _, server_name in ipairs(servers) do
+-- 	-- Load server-specific config from lsp/<server-name>.lua
+-- 	local config_path = vim.fn.stdpath("config") .. "/lsp/" .. server_name .. ".lua"
+--
+-- 	if vim.fn.filereadable(config_path) == 1 then
+-- 		-- Load the config file
+-- 		local ok, server_config = pcall(dofile, config_path)
+--
+-- 		if ok and type(server_config) == "table" then
+-- 			-- Merge capabilities with server config
+-- 			server_config.capabilities = vim.tbl_deep_extend("force", capabilities, server_config.capabilities or {})
+--
+-- 			-- Enable the LSP with the loaded config
+-- 			vim.lsp.enable(server_name, server_config)
+-- 		else
+-- 			-- If config load failed, enable with default config
+-- 			vim.notify(string.format("Failed to load config for %s, using defaults", server_name), vim.log.levels.WARN)
+-- 			vim.lsp.enable(server_name, true)
+-- 		end
+-- 	else
+-- 		-- No config file, use default config
+-- 		vim.lsp.enable(server_name, true)
+-- 	end
+-- end
+
+-- ============================================================================
+-- LSP Server Setup
+-- ============================================================================
+
 local capabilities = get_capabilities()
 
 for _, server_name in ipairs(servers) do
-	-- Load server-specific config from lsp/<server-name>.lua
 	local config_path = vim.fn.stdpath("config") .. "/lsp/" .. server_name .. ".lua"
 
 	if vim.fn.filereadable(config_path) == 1 then
-		-- Load the config file
 		local ok, server_config = pcall(dofile, config_path)
 
 		if ok and type(server_config) == "table" then
-			-- Merge capabilities with server config
 			server_config.capabilities = vim.tbl_deep_extend("force", capabilities, server_config.capabilities or {})
 
-			-- Enable the LSP with the loaded config
-			vim.lsp.enable(server_name, server_config)
+			-- Register server configuration
+			vim.lsp.config(server_name, server_config)
 		else
-			-- If config load failed, enable with default config
 			vim.notify(string.format("Failed to load config for %s, using defaults", server_name), vim.log.levels.WARN)
-			vim.lsp.enable(server_name, true)
+
+			vim.lsp.config(server_name, {
+				capabilities = capabilities,
+			})
 		end
 	else
-		-- No config file, use default config
-		vim.lsp.enable(server_name, true)
+		vim.lsp.config(server_name, {
+			capabilities = capabilities,
+		})
 	end
+	-- Enable the server
+	vim.lsp.enable(server_name)
 end
 
 -- ============================================================================
