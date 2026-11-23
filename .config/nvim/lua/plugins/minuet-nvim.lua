@@ -1,3 +1,7 @@
+-------------------------------------------------
+-- name : minuet-nvim
+-- url  : https://github.com/milanglacier/minuet-ai.nvim
+-------------------------------------------------
 return {
 	{
 		"milanglacier/minuet-ai.nvim",
@@ -26,6 +30,10 @@ return {
 							top_p = 0.9,
 						},
 					},
+				},
+
+				blink = {
+					enable_auto_complete = false,
 				},
 
 				virtualtext = {
