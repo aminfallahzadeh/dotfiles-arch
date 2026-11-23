@@ -10,7 +10,9 @@ return {
 				-- debounce = 400,
 				provider = "openai_fim_compatible",
 				n_completions = 1,
-				context_window = 512,
+				-- context_window = 512,
+
+				context_window = 768,
 
 				provider_options = {
 					openai_fim_compatible = {
@@ -18,8 +20,9 @@ return {
 						name = "Ollama",
 						end_point = "http://localhost:11434/v1/completions",
 						model = "qwen2.5-coder:7b",
+						-- model = "qwen2.5-coder:14b",
 						optional = {
-							max_tokens = 56,
+							max_tokens = 40,
 							top_p = 0.9,
 						},
 					},
